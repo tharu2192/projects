@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+<style>
+body {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 50px;
+        background-color: aquamarine;
+    }
+
+    h1 {
+        color: purple;
+        text-shadow: plum 4px 2px 2px ;
+    }
+
+    div {
+        color: purple;
+    }
+
+    input {
+        padding: 20px;
+        font-size: 30px;
+        margin: 10px;
+        border: gray 3px solid;
+    }
+
+    label {
+        color: purple;
+    }
+
+    input:focus {
+        outline: none;
+        border: purple 3px solid;
+        background-color: plum;
+        color: black;
+    }
+
+    input:hover {
+        border: purple 3px solid;
+    }
+
+    button {
+        padding: 30px;
+        font-size: 23px;
+        margin: 30px;
+        border-radius: 30px;
+        outline: none;
+        border: rgb(171, 54, 187) 3px solid;
+        transition: 0.3s ease-in-out;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        box-shadow: plum 0px 0px 40px 20px;
+    }
+
+    button:hover {
+        cursor: grab;
+        background-color: purple;
+        font-size: 28px;
+        border: plum 3px solid;
+        color: white;
+        box-shadow: plum 0px 0px 20px 10px;
+    }
+</style>
+<body>
+    
+
+        <label for ="language paper">language paper:</label>
+        <input type="number" id="x" placeholder="Mark"><br>
+        <label for="general subject">General Subject:</label>
+        <input type="number" id="y" placeholder="Mark"><br>
+        <button onclick="mark()">submit</button>
+        <div id="result"></div>
+        <div id="remark"></div>
+
+         <script>
+        function mark(){
+            var a=parseInt(document.getElementById("x").value)
+            var b=parseInt(document.getElementById("y").value)
+            var c=((a+b)/2)/2
+            document.getElementById("result").innerHTML="mark is"+c
+     
+        if(c>=87){
+            document.getElementById("remark").innerHTML=("congratulation!")
+        }
+        else {
+            document.getElementById("remark").innerHTML=("Good luck next time")
+        }
+    }
+    </script>
+    
+</body>
+</html>
